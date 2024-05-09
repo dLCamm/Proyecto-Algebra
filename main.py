@@ -1,4 +1,29 @@
-import customtkinter
+import customtkinter 
+import numpy as np
+
+#Inversa
+def inversa():
+    
+
+    f = int(input('Ingrese el numero de filas y columnas (La matriz es cuadada)'))
+
+    matriz = []
+    for i in range(f):
+        fila = []
+        for j in range(f):
+            valor = float(input(f"Ingrese el elemento [{i},{j}]: "))
+            fila.append(valor)
+        matriz.append(fila)
+
+    l = np.array(matriz)
+
+
+    print(l)
+
+    inversa = np.linalg.inv(l)
+    print(inversa)
+
+#Fin de la inversa
 
 
 def buttons(frame, frame2):
